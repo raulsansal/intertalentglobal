@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  ),
   title: "Intertalent Global | Gabriela García Cortés",
-  description: "Talento sin fronteras. Liderazgo en evolución. Experta Global en Recursos Humanos.",
+  description: "Intertalent Global. Liderazgo en evolución. Experta Global en Recursos Humanos.",
 };
 
 export default function RootLayout({
