@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #23354F;
+  --color-black: #1F2937;
+  --color-white-soft: #F3F4F6;
+  --color-gold: #EEC073;
+  --color-gold-hover: #d4a455;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1F2937;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
