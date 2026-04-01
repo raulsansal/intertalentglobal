@@ -2,7 +2,7 @@ interface AvatarProps {
   displayName: string | null;
   email: string | null;
   avatarUrl?: string | null;
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
 }
 
 /**
@@ -24,6 +24,7 @@ function getInitials(displayName: string | null, email: string | null): string {
 const sizes = {
   sm: "w-8 h-8 text-xs",
   md: "w-10 h-10 text-sm",
+  lg: "w-16 h-16 text-xl",
 };
 
 export default function Avatar({

@@ -94,29 +94,7 @@ export default function BlogPage() {
             </select>
           </div>
         </div>
-      </section>
-
-      {/* Las 5 Dimensiones */}
-      <section className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-xl font-bold text-[#23354F] mb-8">Las 5 Dimensiones</h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            {DIMENSIONS.map((dim) => (
-              <div key={dim.id} className="flex flex-col items-center gap-2">
-                <div
-                  className={`w-16 h-16 rounded-full border-4 ${dim.color} bg-[#F3F4F6] flex items-center justify-center text-2xl`}
-                  aria-hidden="true"
-                >
-                  {dim.icon}
-                </div>
-                <p className="text-xs font-medium text-[#23354F] max-w-[90px] text-center leading-tight">
-                  {dim.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </section>      
 
       {/* Artículos Destacados */}
       <section className="bg-white py-16">

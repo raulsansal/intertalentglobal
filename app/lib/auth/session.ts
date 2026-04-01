@@ -1,4 +1,5 @@
-import { adminAuth } from "@/app/lib/firebase-admin";
+import { adminAuth, adminDb } from "@/app/lib/firebase-admin";
+import { getRoleFromClaims } from "@/app/lib/auth/roles";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import type { DecodedIdToken } from "firebase-admin/auth";
@@ -16,13 +17,27 @@ const SESSION_DURATION_S = SESSION_DURATION_MS / 1000;
 export async function createSession(idToken: string): Promise<NextResponse> {
   const decoded = await adminAuth.verifyIdToken(idToken);
 
+  // Sincronizar emailVerified y, si falta, inicializar role.
+  // El cliente no puede escribir 'role' (regla de seguridad lo bloquea);
+  // el Admin SDK bypassa esas reglas por diseño.
+  const firestoreUpdate: Record<string, unknown> = {
+    emailVerified: decoded.email_verified === true,
+  };
+  if (!decoded.role) {
+    firestoreUpdate.role = "usuario";
+  }
+  await adminDb.doc(`users/${decoded.uid}`).set(firestoreUpdate, { merge: true });
+
   const sessionCookie = await adminAuth.createSessionCookie(idToken, {
     expiresIn: SESSION_DURATION_MS,
   });
 
+  const role = getRoleFromClaims(decoded as Record<string, unknown>);
+
   const response = NextResponse.json({
     success: true,
     isAdmin: decoded.admin === true,
+    role,
   });
   response.cookies.set(SESSION_COOKIE_NAME, sessionCookie, {
     httpOnly: true,

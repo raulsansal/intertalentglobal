@@ -23,12 +23,35 @@ export default function Navbar() {
   const [authLoading, setAuthLoading] = useState(true);
   // Flag para distinguir "nunca registrado" de "registrado pero sin sesión"
   const [hasAccount, setHasAccount] = useState(false);
+  // URL del panel según el rol del usuario — null si no tiene panel (role "usuario")
+  const [panelUrl, setPanelUrl] = useState<string | null>(null);
+
+  const STAFF_PANEL_URLS: Record<string, string> = {
+    admin: "/admin",
+    moderador: "/panel",
+    editor_blog: "/panel",
+    editor_podcast: "/panel",
+    editor_cursos: "/panel",
+  };
 
   useEffect(() => {
     setHasAccount(localStorage.getItem("hasAccount") === "true");
 
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       setUser(firebaseUser);
+      if (firebaseUser) {
+        try {
+          const tokenResult = await firebaseUser.getIdTokenResult();
+          const isAdmin = tokenResult.claims.admin === true;
+          const role = tokenResult.claims.role as string | undefined;
+          const roleKey = isAdmin ? "admin" : (role ?? "");
+          setPanelUrl(STAFF_PANEL_URLS[roleKey] ?? null);
+        } catch {
+          setPanelUrl(null);
+        }
+      } else {
+        setPanelUrl(null);
+      }
       setAuthLoading(false);
     });
     return unsubscribe;
@@ -122,6 +145,16 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          {panelUrl && (
+            <li>
+              <Link
+                href={panelUrl}
+                className="text-sm font-medium text-[#23354F] hover:text-[#EEC073] transition-colors"
+              >
+                Panel
+              </Link>
+            </li>
+          )}
         </ul>
 
         {/* Desktop CTAs */}
@@ -167,6 +200,17 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            {panelUrl && (
+              <li>
+                <Link
+                  href={panelUrl}
+                  className="text-sm font-medium text-[#23354F] hover:text-[#EEC073]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Panel
+                </Link>
+              </li>
+            )}
           </ul>
           <div className="flex flex-col gap-3 mt-4">
             <Link

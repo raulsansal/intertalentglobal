@@ -13,7 +13,7 @@ export default async function LoginPage() {
   const cookie = await getSessionCookie();
   if (cookie) {
     const session = await verifySession(cookie);
-    if (session) redirect(session.admin ? "/admin" : "/perfil");
+    if (session) redirect(session.admin ? "/admin" : "/");
   }
 
   return (
@@ -23,7 +23,7 @@ export default async function LoginPage() {
     >
       <div className="bg-white rounded-lg shadow-sm p-8 w-full max-w-sm">
         <h1 className="text-xl font-bold text-[#23354F] mb-6">
-          Acceso al panel
+          Iniciar Sesión
         </h1>
         <LoginForm />
       </div>

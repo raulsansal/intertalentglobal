@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import RecaptchaProvider from "@/app/components/auth/RecaptchaProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="antialiased">
-        {children}
+        <RecaptchaProvider>
+          {children}
+        </RecaptchaProvider>
       </body>
     </html>
   );
