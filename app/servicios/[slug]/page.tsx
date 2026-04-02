@@ -27,17 +27,17 @@ export default function ServicioDetailPage({ params }: PageProps) {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#23354F] text-white">
+      <section className="bg-primary text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             <span
-              className={`text-4xl w-20 h-20 rounded-2xl ${servicio.color} flex items-center justify-center flex-shrink-0`}
+              className={`text-4xl w-20 h-20 rounded-2xl ${servicio.color} flex items-center justify-center shrink-0`}
               aria-hidden="true"
             >
               {servicio.icon}
             </span>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-3">
                 Servicio
               </p>
               <h1 className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4 leading-tight">
@@ -56,19 +56,19 @@ export default function ServicioDetailPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold text-[#23354F] mb-6">Descripción completa</h2>
+              <h2 className="text-2xl font-bold text-primary mb-6">Descripción completa</h2>
               <p className="text-base text-gray-700 leading-relaxed mb-8">{servicio.fullDescription}</p>
 
               {/* Results */}
-              <div className="bg-[#F3F4F6] rounded-lg p-6">
-                <h3 className="text-sm font-bold text-[#23354F] uppercase tracking-wide mb-4">
+              <div className="bg-white-soft rounded-lg p-6">
+                <h3 className="text-sm font-bold text-primary uppercase tracking-wide mb-4">
                   Resultados que lograrás
                 </h3>
                 <ul className="space-y-3" aria-label={`Resultados del servicio ${servicio.title}`}>
                   {servicio.results.map((result) => (
                     <li key={result} className="flex items-start gap-3 text-sm text-gray-700">
                       <svg
-                        className="w-5 h-5 text-[#EEC073] flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 text-gold shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -84,8 +84,8 @@ export default function ServicioDetailPage({ params }: PageProps) {
             </div>
 
             {/* Service Image */}
-            <div className="flex-shrink-0 w-full md:w-80">
-              <div className="relative w-full h-64 md:h-80 bg-[#F3F4F6] rounded-lg overflow-hidden shadow-md">
+            <div className="shrink-0 w-full md:w-80">
+              <div className="relative w-full h-64 md:h-80 bg-white-soft rounded-lg overflow-hidden shadow-md">
                 <Image
                   src={servicio.image}
                   alt={`Imagen ilustrativa del servicio: ${servicio.title}`}
@@ -100,9 +100,9 @@ export default function ServicioDetailPage({ params }: PageProps) {
 
       {/* Case Studies */}
       {servicio.caseStudies.length > 0 && (
-        <section className="bg-[#F3F4F6] py-16">
+        <section className="bg-white-soft py-16">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-10 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10 text-center">
               Casos de Éxito
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -113,15 +113,15 @@ export default function ServicioDetailPage({ params }: PageProps) {
                 >
                   <div className="flex gap-8 mb-4">
                     <div>
-                      <p className="text-xl font-bold text-[#23354F]">{c.metric1}</p>
+                      <p className="text-xl font-bold text-primary">{c.metric1}</p>
                     </div>
                     <div>
-                      <p className="text-xl font-bold text-[#23354F]">{c.metric2}</p>
+                      <p className="text-xl font-bold text-primary">{c.metric2}</p>
                     </div>
                   </div>
                   <p className="text-xs font-semibold text-gray-500 mb-3">
                     Cliente:{' '}
-                    <span className="text-[#23354F] font-bold">{c.client}</span>
+                    <span className="text-primary font-bold">{c.client}</span>
                   </p>
                   <p className="text-sm text-gray-600 leading-relaxed">{c.description}</p>
                 </div>
@@ -134,23 +134,23 @@ export default function ServicioDetailPage({ params }: PageProps) {
       {/* Testimonial */}
       <section className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-6">
             Testimonio
           </p>
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-[#F3F4F6] rounded-lg p-6 text-left">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white-soft rounded-lg p-6 text-left">
             <Image
               src={getAvatarUrl(servicio.testimonial.author, 56)}
               alt={`Foto de perfil de ${servicio.testimonial.author}`}
               width={56}
               height={56}
-              className="rounded-full flex-shrink-0"
+              className="rounded-full shrink-0"
             />
             <blockquote>
-              <p className="text-lg md:text-xl font-light text-[#23354F] italic leading-relaxed mb-4">
-                "{servicio.testimonial.quote}"
+              <p className="text-lg md:text-xl font-light text-primary italic leading-relaxed mb-4">
+                &quot;{servicio.testimonial.quote}&quot;
               </p>
               <footer className="text-sm text-gray-500">
-                <strong className="text-[#23354F]">{servicio.testimonial.author}</strong>
+                <strong className="text-primary">{servicio.testimonial.author}</strong>
                 {' '}· {servicio.testimonial.role}, {servicio.testimonial.company}
               </footer>
             </blockquote>
@@ -190,10 +190,10 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
   }
 
   return (
-    <section className="bg-[#F3F4F6] py-16" id="propuesta">
+    <section className="bg-white-soft py-16" id="propuesta">
       <div className="max-w-2xl mx-auto px-6">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
             Solicita tu propuesta
           </h2>
           <p className="text-sm text-gray-500">
@@ -209,14 +209,14 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
             className="bg-white rounded-lg p-8 text-center shadow-sm"
           >
             <div
-              className="w-14 h-14 rounded-full bg-[#EEC073] flex items-center justify-center mx-auto mb-4"
+              className="w-14 h-14 rounded-full bg-gold flex items-center justify-center mx-auto mb-4"
               aria-hidden="true"
             >
-              <svg className="w-7 h-7 text-[#23354F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-lg font-bold text-[#23354F] mb-2">¡Solicitud enviada!</h3>
+            <h3 className="text-lg font-bold text-primary mb-2">¡Solicitud enviada!</h3>
             <p className="text-sm text-gray-500">
               Te responderemos en menos de 24 horas con una propuesta personalizada.
             </p>
@@ -230,7 +230,7 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="name" className="block text-xs font-semibold text-[#23354F] mb-1">
+                <label htmlFor="name" className="block text-xs font-semibold text-primary mb-1">
                   Nombre completo <span aria-hidden="true">*</span>
                 </label>
                 <input
@@ -242,11 +242,11 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Tu nombre completo"
-                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-xs font-semibold text-[#23354F] mb-1">
+                <label htmlFor="email" className="block text-xs font-semibold text-primary mb-1">
                   Correo profesional <span aria-hidden="true">*</span>
                 </label>
                 <input
@@ -258,14 +258,14 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="tu@empresa.com"
-                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="company" className="block text-xs font-semibold text-[#23354F] mb-1">
+                <label htmlFor="company" className="block text-xs font-semibold text-primary mb-1">
                   Empresa <span aria-hidden="true">*</span>
                 </label>
                 <input
@@ -277,11 +277,11 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
                   value={form.company}
                   onChange={handleChange}
                   placeholder="Nombre de tu empresa"
-                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
                 />
               </div>
               <div>
-                <label htmlFor="employees" className="block text-xs font-semibold text-[#23354F] mb-1">
+                <label htmlFor="employees" className="block text-xs font-semibold text-primary mb-1">
                   Número de empleados
                 </label>
                 <select
@@ -289,7 +289,7 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
                   name="employees"
                   value={form.employees}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+                  className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
                 >
                   <option value="">Selecciona un rango</option>
                   {EMPLOYEE_RANGES.map((r) => (
@@ -302,7 +302,7 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
             </div>
 
             <div>
-              <label htmlFor="country" className="block text-xs font-semibold text-[#23354F] mb-1">
+              <label htmlFor="country" className="block text-xs font-semibold text-primary mb-1">
                 País
               </label>
               <input
@@ -313,12 +313,12 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
                 value={form.country}
                 onChange={handleChange}
                 placeholder="País o región de tu organización"
-                className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+                className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
 
             <div>
-              <label htmlFor="challenge" className="block text-xs font-semibold text-[#23354F] mb-1">
+              <label htmlFor="challenge" className="block text-xs font-semibold text-primary mb-1">
                 Descripción del desafío <span aria-hidden="true">*</span>
               </label>
               <textarea
@@ -329,7 +329,7 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
                 value={form.challenge}
                 onChange={handleChange}
                 placeholder="Cuéntanos sobre tu mayor desafío en RH global..."
-                className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073] resize-none"
+                className="w-full border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold resize-none"
               />
             </div>
 
@@ -339,7 +339,7 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
 
             <button
               type="submit"
-              className="w-full bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm py-3 rounded transition-colors"
+              className="w-full bg-gold hover:bg-gold-hover text-primary font-semibold text-sm py-3 rounded transition-colors"
             >
               Enviar solicitud
             </button>
@@ -347,7 +347,7 @@ function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
         )}
 
         <div className="text-center mt-6">
-          <Link href="/servicios" className="text-xs text-gray-400 hover:text-[#23354F] transition-colors">
+          <Link href="/servicios" className="text-xs text-gray-400 hover:text-primary transition-colors">
             ← Ver todos los servicios
           </Link>
         </div>

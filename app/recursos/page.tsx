@@ -24,9 +24,9 @@ export default function RecursosPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#23354F] text-white">
+      <section className="bg-primary text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-4">
             Recursos Gratuitos
           </p>
           <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
@@ -43,7 +43,7 @@ export default function RecursosPage() {
       <RecursosFilter recursos={RECURSOS} />
 
       {/* Newsletter CTA */}
-      <section className="bg-[#23354F] py-16">
+      <section className="bg-primary py-16">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <span className="text-3xl mb-4 block" aria-hidden="true">🎁</span>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
@@ -54,7 +54,7 @@ export default function RecursosPage() {
           </p>
           <Link
             href="/blog#newsletter"
-            className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-8 py-3 rounded transition-colors"
+            className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-8 py-3 rounded transition-colors"
           >
             Suscribirme y recibir recursos →
           </Link>

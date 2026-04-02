@@ -36,10 +36,10 @@ export default function EmailVerificationBanner() {
   return (
     <div
       role="alert"
-      className="bg-[#EEC073]/15 border border-[#EEC073] rounded-lg px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+      className="bg-gold/15 border border-gold rounded-lg px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
     >
       <div>
-        <p className="text-sm font-medium text-[#23354F]">
+        <p className="text-sm font-medium text-primary">
           Verifica tu correo electrónico
         </p>
         <p className="text-xs text-gray-500 mt-0.5">
@@ -54,7 +54,7 @@ export default function EmailVerificationBanner() {
         <p
           role="status"
           aria-live="polite"
-          className="shrink-0 text-xs font-medium text-[#23354F]"
+          className="shrink-0 text-xs font-medium text-primary"
         >
           Correo enviado ✓
         </p>
@@ -63,7 +63,7 @@ export default function EmailVerificationBanner() {
           type="button"
           onClick={handleResend}
           disabled={isSending}
-          className="shrink-0 text-xs font-semibold text-[#23354F] underline hover:text-[#d4a455] transition-colors disabled:opacity-60"
+          className="shrink-0 text-xs font-semibold text-primary underline hover:text-gold-hover transition-colors disabled:opacity-60"
         >
           {isSending ? "Enviando..." : "Reenviar correo"}
         </button>

@@ -42,7 +42,7 @@ export default function Servicios() {
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
             Servicios Especializados
           </h2>
           <p className="text-sm text-gray-500">
@@ -56,8 +56,8 @@ export default function Servicios() {
               key={service.title}
               className="border border-gray-100 rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col items-center text-center gap-4"
             >
-              <div className="text-[#EEC073]">{service.icon}</div>
-              <h3 className="font-bold text-[#23354F] text-base">{service.title}</h3>
+              <div className="text-gold">{service.icon}</div>
+              <h3 className="font-bold text-primary text-base">{service.title}</h3>
               <p className="text-sm text-gray-500">{service.description}</p>
             </div>
           ))}

@@ -11,6 +11,6 @@
 
 body {
   background: #ffffff;
-  color: #1F2937;
+  color: var(--color-black);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

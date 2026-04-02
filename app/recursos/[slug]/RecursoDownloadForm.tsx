@@ -25,7 +25,7 @@ export default function RecursoDownloadForm({ recursoTitle, typeLabel }: Recurso
   }
 
   return (
-    <section className="bg-[#23354F] py-16" id="descargar">
+    <section className="bg-primary py-16" id="descargar">
       <div className="max-w-xl mx-auto px-6 text-center">
         <span className="text-3xl mb-4 block" aria-hidden="true">🎁</span>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
@@ -62,7 +62,7 @@ export default function RecursoDownloadForm({ recursoTitle, typeLabel }: Recurso
                 required
                 autoComplete="email"
                 aria-describedby={error ? 'resource-email-error' : undefined}
-                className="w-full border border-gray-500 bg-white/10 text-white placeholder-gray-400 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+                className="w-full border border-gray-500 bg-white/10 text-white placeholder-gray-400 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
               />
               {error && (
                 <p id="resource-email-error" role="alert" className="text-xs text-red-300 mt-1 text-left">
@@ -72,7 +72,7 @@ export default function RecursoDownloadForm({ recursoTitle, typeLabel }: Recurso
             </div>
             <button
               type="submit"
-              className="bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-2 rounded transition-colors whitespace-nowrap"
+              className="bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-2 rounded transition-colors whitespace-nowrap"
             >
               Enviar recurso
             </button>

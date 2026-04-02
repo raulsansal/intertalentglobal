@@ -44,9 +44,9 @@ export default function BlogPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#23354F] text-white">
+      <section className="bg-primary text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-4">
             El Pulso Global de RH
           </p>
           <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-4">
@@ -65,11 +65,11 @@ export default function BlogPage() {
             <input
               type="search"
               placeholder="Busca 'IA ética', 'bienestar global', 'GDPR en LATAM'..."
-              className="flex-1 border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+              className="flex-1 border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
               aria-label="Buscar artículos"
             />
             <select
-              className="border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+              className="border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
               aria-label="Filtrar por dimensión"
               defaultValue=""
             >
@@ -81,7 +81,7 @@ export default function BlogPage() {
               ))}
             </select>
             <select
-              className="border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+              className="border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
               aria-label="Filtrar por formato"
               defaultValue=""
             >
@@ -99,14 +99,14 @@ export default function BlogPage() {
       {/* Artículos Destacados */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-8">Artículos Destacados</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">Artículos Destacados</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featured.map((post) => (
               <article
                 key={post.slug}
                 className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col"
               >
-                <div className="relative w-full h-48 bg-[#F3F4F6]">
+                <div className="relative w-full h-48 bg-white-soft">
                   <Image
                     src={post.image}
                     alt={`Imagen ilustrativa para el artículo: ${post.title}`}
@@ -118,7 +118,7 @@ export default function BlogPage() {
                   <div className="mb-3">
                     <TypeBadge type={post.type} />
                   </div>
-                  <h3 className="text-base font-bold text-[#23354F] mb-2 leading-snug">{post.title}</h3>
+                  <h3 className="text-base font-bold text-primary mb-2 leading-snug">{post.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed flex-1">{post.excerpt}</p>
                   <div className="mt-4 flex items-center justify-between">
                     <div className="flex items-center gap-3 text-xs text-gray-400">
@@ -128,10 +128,10 @@ export default function BlogPage() {
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="w-8 h-8 rounded-full bg-[#EEC073] hover:bg-[#d4a455] flex items-center justify-center transition-colors"
+                      className="w-8 h-8 rounded-full bg-gold hover:bg-gold flex items-center justify-center transition-colors"
                       aria-label={`Leer artículo: ${post.title}`}
                     >
-                      <svg className="w-4 h-4 text-[#23354F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </Link>
@@ -144,13 +144,13 @@ export default function BlogPage() {
       </section>
 
       {/* Últimos Análisis */}
-      <section className="bg-[#F3F4F6] py-16">
+      <section className="bg-white-soft py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#23354F]">Últimos Análisis</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary">Últimos Análisis</h2>
             <Link
               href="/blog"
-              className="text-sm font-medium text-[#23354F] hover:text-[#EEC073] transition-colors"
+              className="text-sm font-medium text-primary hover:text-gold transition-colors"
             >
               Ver todos →
             </Link>
@@ -161,7 +161,7 @@ export default function BlogPage() {
                 key={post.slug}
                 className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex gap-4 p-4"
               >
-                <div className="relative w-24 h-24 flex-shrink-0 bg-[#F3F4F6] rounded-lg overflow-hidden">
+                <div className="relative w-24 h-24 shrink-0 bg-white-soft rounded-lg overflow-hidden">
                   <Image
                     src={post.image}
                     alt={`Imagen ilustrativa para: ${post.title}`}
@@ -174,7 +174,7 @@ export default function BlogPage() {
                     <div className="mb-1">
                       <TypeBadge type={post.type} />
                     </div>
-                    <h3 className="text-sm font-bold text-[#23354F] leading-snug mt-1 line-clamp-2">
+                    <h3 className="text-sm font-bold text-primary leading-snug mt-1 line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-xs text-gray-500 mt-1 line-clamp-2">{post.excerpt}</p>
@@ -185,7 +185,7 @@ export default function BlogPage() {
                     <span>{post.date}</span>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="ml-auto text-[#23354F] hover:text-[#EEC073] font-medium transition-colors"
+                      className="ml-auto text-primary hover:text-gold font-medium transition-colors"
                     >
                       Leer →
                     </Link>

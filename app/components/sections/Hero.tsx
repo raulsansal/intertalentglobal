@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="bg-[#23354F] text-white">
+    <section className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-10">
         {/* Text content */}
         <div className="flex-1">
@@ -20,13 +20,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/servicios"
-              className="border border-white text-white hover:bg-white hover:text-[#23354F] font-medium text-sm px-6 py-3 rounded transition-colors"
+              className="border border-white text-white hover:bg-white hover:text-primary font-medium text-sm px-6 py-3 rounded transition-colors"
             >
               Explora Soluciones
             </Link>
             <Link
               href="/recursos"
-              className="bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-3 rounded transition-colors"
+              className="bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-3 rounded transition-colors"
             >
               Ver Recursos
             </Link>
@@ -35,7 +35,7 @@ export default function Hero() {
 
         {/* Profile image */}
         <div className="flex flex-col items-center gap-3">
-          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-[#EEC073] relative">
+          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-gold relative">
             <Image
               src="/images/gabriela-hero.jpg"
               alt="Gabriela García Cortés"

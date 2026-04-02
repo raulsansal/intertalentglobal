@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   ),
   title: "Intertalent Global | Gabriela García Cortés",
   description: "Intertalent Global. Liderazgo en evolución. Experta Global en Recursos Humanos.",
+  // Bloqueo global de indexación durante la fase de desarrollo.
+  // Cuando el sitio esté listo para producción, eliminar estas dos líneas.
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

@@ -27,9 +27,9 @@ export default function PreguntaleExperta() {
   const [state, action, isPending] = useActionState(formAction, initialState);
 
   return (
-    <section className="bg-[#F3F4F6] py-16">
+    <section className="bg-white-soft py-16">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
           Pregúntale a la Experta
         </h2>
         <p className="text-sm text-gray-500 mb-8">
@@ -37,7 +37,7 @@ export default function PreguntaleExperta() {
         </p>
 
         {state.status === "success" ? (
-          <p className="text-[#23354F] font-medium">{state.message}</p>
+          <p className="text-primary font-medium">{state.message}</p>
         ) : (
           <form action={action} className="flex flex-col gap-4">
             <textarea
@@ -46,12 +46,12 @@ export default function PreguntaleExperta() {
               required
               rows={4}
               disabled={isPending}
-              className="w-full border border-gray-300 rounded px-4 py-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073] resize-none disabled:opacity-60"
+              className="w-full border border-gray-300 rounded px-4 py-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold resize-none disabled:opacity-60"
             />
             <button
               type="submit"
               disabled={isPending}
-              className="bg-[#23354F] hover:bg-[#1a2840] text-white font-semibold text-sm px-8 py-3 rounded transition-colors mx-auto disabled:opacity-60"
+              className="bg-primary hover:bg-[#1a2840] text-white font-semibold text-sm px-8 py-3 rounded transition-colors mx-auto disabled:opacity-60"
             >
               {isPending ? "Enviando..." : "Enviar Pregunta"}
             </button>

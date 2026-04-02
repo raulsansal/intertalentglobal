@@ -181,8 +181,8 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
 
   // ── Clases reutilizables ──────────────────────────────────────────────────
   const inputClass =
-    "w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60 text-sm";
-  const labelClass = "block text-sm font-medium text-[#23354F] mb-1";
+    "w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60 text-sm";
+  const labelClass = "block text-sm font-medium text-primary mb-1";
   const errorClass = "text-xs text-red-600 mt-1";
 
   return (
@@ -205,7 +205,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
             type="button"
             disabled
             title="Próximamente podrás cambiar tu foto de perfil"
-            className="text-sm font-medium text-[#23354F] border border-gray-300 px-4 py-2 rounded opacity-40 cursor-not-allowed"
+            className="text-sm font-medium text-primary border border-gray-300 px-4 py-2 rounded opacity-40 cursor-not-allowed"
           >
             Cambiar foto
           </button>
@@ -215,7 +215,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
 
       {/* ── Información personal ────────────────────────────────────────── */}
       <fieldset>
-        <legend className="text-base font-semibold text-[#23354F] mb-4 pb-2 border-b border-gray-100 w-full">
+        <legend className="text-base font-semibold text-primary mb-4 pb-2 border-b border-gray-100 w-full">
           Información personal
         </legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -328,7 +328,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
 
       {/* ── Temas de interés ────────────────────────────────────────────── */}
       <fieldset>
-        <legend className="text-base font-semibold text-[#23354F] mb-1 pb-2 border-b border-gray-100 w-full">
+        <legend className="text-base font-semibold text-primary mb-1 pb-2 border-b border-gray-100 w-full">
           Temas de interés
         </legend>
         <p className="text-xs text-gray-500 mb-4">Selecciona todos los que apliquen.</p>
@@ -346,7 +346,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
                 htmlFor={id}
                 className={`flex items-center gap-2 px-3 py-2 rounded border cursor-pointer text-sm transition-colors ${
                   checked
-                    ? "border-[#EEC073] bg-[#EEC073]/10 text-[#23354F] font-medium"
+                    ? "border-gold bg-gold/10 text-primary font-medium"
                     : "border-gray-200 text-gray-600 hover:border-gray-300"
                 }`}
               >
@@ -356,7 +356,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
                   checked={checked}
                   onChange={() => toggleTopic(topic)}
                   disabled={isPending}
-                  className="accent-[#EEC073]"
+                  className="accent-gold"
                 />
                 {topic}
               </label>
@@ -372,7 +372,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
 
       {/* ── Cuenta ──────────────────────────────────────────────────────── */}
       <fieldset>
-        <legend className="text-base font-semibold text-[#23354F] mb-4 pb-2 border-b border-gray-100 w-full">
+        <legend className="text-base font-semibold text-primary mb-4 pb-2 border-b border-gray-100 w-full">
           Cuenta
         </legend>
 
@@ -512,7 +512,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
           type="button"
           onClick={() => router.push("/")}
           disabled={isPending}
-          className="text-sm text-gray-500 hover:text-[#23354F] transition-colors disabled:opacity-60 text-center sm:text-left"
+          className="text-sm text-gray-500 hover:text-primary transition-colors disabled:opacity-60 text-center sm:text-left"
         >
           Omitir por ahora
         </button>
@@ -522,7 +522,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
             type="button"
             onClick={() => router.push("/")}
             disabled={isPending}
-            className="flex-1 sm:flex-none text-sm font-medium text-[#23354F] border border-gray-300 px-5 py-2 rounded hover:bg-gray-50 transition-colors disabled:opacity-60"
+            className="flex-1 sm:flex-none text-sm font-medium text-primary border border-gray-300 px-5 py-2 rounded hover:bg-gray-50 transition-colors disabled:opacity-60"
           >
             Cancelar
           </button>
@@ -530,7 +530,7 @@ export default function ProfileForm({ initialData }: { initialData: ProfileIniti
             type="button"
             onClick={handleSave}
             disabled={isPending}
-            className="flex-1 sm:flex-none bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-2 rounded transition-colors disabled:opacity-60"
+            className="flex-1 sm:flex-none bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-2 rounded transition-colors disabled:opacity-60"
           >
             {isPending ? "Guardando..." : "Guardar cambios"}
           </button>

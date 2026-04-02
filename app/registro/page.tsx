@@ -19,10 +19,10 @@ export default async function RegisterPage() {
   return (
     <main
       id="main-content"
-      className="min-h-screen bg-[#F3F4F6] flex items-center justify-center px-6 py-12"
+      className="min-h-screen bg-white-soft flex items-center justify-center px-6 py-12"
     >
       <div className="bg-white rounded-lg shadow-sm p-8 w-full max-w-md">
-        <h1 className="text-xl font-bold text-[#23354F] mb-2">Crear cuenta</h1>
+        <h1 className="text-xl font-bold text-primary mb-2">Crear cuenta</h1>
         <p className="text-sm text-gray-500 mb-6">
           Regístrate para agendar consultas y acceder a contenido exclusivo.
         </p>

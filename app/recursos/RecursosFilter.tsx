@@ -42,8 +42,8 @@ export default function RecursosFilter({ recursos }: RecursosFilterProps) {
             onClick={() => setActiveFilter(null)}
             className={`text-xs font-semibold px-4 py-2 rounded-full border transition-colors ${
               activeFilter === null
-                ? 'bg-[#23354F] text-white border-[#23354F]'
-                : 'border-gray-300 text-gray-600 hover:border-[#23354F]'
+                ? 'bg-primary text-white border-primary'
+                : 'border-gray-300 text-gray-600 hover:border-primary'
             }`}
             aria-pressed={activeFilter === null}
           >
@@ -55,8 +55,8 @@ export default function RecursosFilter({ recursos }: RecursosFilterProps) {
               onClick={() => setActiveFilter(type)}
               className={`text-xs font-semibold px-4 py-2 rounded-full border transition-colors ${
                 activeFilter === type
-                  ? 'bg-[#23354F] text-white border-[#23354F]'
-                  : 'border-gray-300 text-gray-600 hover:border-[#23354F]'
+                  ? 'bg-primary text-white border-primary'
+                  : 'border-gray-300 text-gray-600 hover:border-primary'
               }`}
               aria-pressed={activeFilter === type}
             >
@@ -72,7 +72,7 @@ export default function RecursosFilter({ recursos }: RecursosFilterProps) {
               key={recurso.slug}
               className="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col"
             >
-              <div className="relative w-full h-48 bg-[#F3F4F6]">
+              <div className="relative w-full h-48 bg-white-soft">
                 <Image
                   src={recurso.image}
                   alt={`Vista previa del recurso: ${recurso.title}`}
@@ -88,12 +88,12 @@ export default function RecursosFilter({ recursos }: RecursosFilterProps) {
                     {TYPE_LABELS[recurso.type]}
                   </span>
                 </div>
-                <h2 className="text-base font-bold text-[#23354F] mb-2 leading-snug">{recurso.title}</h2>
+                <h2 className="text-base font-bold text-primary mb-2 leading-snug">{recurso.title}</h2>
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{recurso.description}</p>
                 <div className="mt-4">
                   <Link
                     href={`/recursos/${recurso.slug}`}
-                    className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-5 py-2 rounded transition-colors"
+                    className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-5 py-2 rounded transition-colors"
                   >
                     Descargar {TYPE_LABELS[recurso.type].toLowerCase()}
                   </Link>

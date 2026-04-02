@@ -75,7 +75,7 @@ export default function Navbar() {
             onClick={() => setProfileOpen(!profileOpen)}
             aria-label="Abrir menú de perfil"
             aria-expanded={profileOpen}
-            className="focus:outline-none focus:ring-2 focus:ring-[#EEC073] rounded-full"
+            className="focus:outline-none focus:ring-2 focus:ring-gold rounded-full"
           >
             <Avatar
               displayName={user.displayName}
@@ -87,14 +87,14 @@ export default function Navbar() {
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-md border border-gray-100 py-1 z-50">
               <Link
                 href="/perfil"
-                className="block px-4 py-2 text-sm text-[#23354F] hover:bg-[#F3F4F6] transition-colors"
+                className="block px-4 py-2 text-sm text-primary hover:bg-white-soft transition-colors"
                 onClick={() => setProfileOpen(false)}
               >
                 Mi perfil
               </Link>
               <button
                 onClick={handleLogout}
-                className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-[#F3F4F6] transition-colors"
+                className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-white-soft transition-colors"
               >
                 Cerrar sesión
               </button>
@@ -108,7 +108,7 @@ export default function Navbar() {
       return (
         <Link
           href="/login"
-          className="text-sm font-semibold text-[#23354F] border border-[#23354F] px-5 py-2 rounded hover:bg-[#23354F] hover:text-white transition-colors"
+          className="text-sm font-semibold text-primary border border-primary px-5 py-2 rounded hover:bg-primary hover:text-white transition-colors"
         >
           Iniciar sesión
         </Link>
@@ -118,7 +118,7 @@ export default function Navbar() {
     return (
       <Link
         href="/registro"
-        className="text-sm font-semibold text-[#23354F] border border-[#23354F] px-5 py-2 rounded hover:bg-[#23354F] hover:text-white transition-colors"
+        className="text-sm font-semibold text-primary border border-primary px-5 py-2 rounded hover:bg-primary hover:text-white transition-colors"
       >
         Registrarme
       </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-[#23354F]">
+        <Link href="/" className="text-xl font-bold text-primary">
           Logo
         </Link>
 
@@ -139,7 +139,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm text-[#1F2937] hover:text-[#23354F] transition-colors"
+                className="text-sm text-black hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>
@@ -149,7 +149,7 @@ export default function Navbar() {
             <li>
               <Link
                 href={panelUrl}
-                className="text-sm font-medium text-[#23354F] hover:text-[#EEC073] transition-colors"
+                className="text-sm font-medium text-primary hover:text-gold transition-colors"
               >
                 Panel
               </Link>
@@ -161,7 +161,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/contacto"
-            className="bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-5 py-2 rounded transition-colors"
+            className="bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-5 py-2 rounded transition-colors"
           >
             Agendar Consulta
           </Link>
@@ -170,7 +170,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-[#23354F]"
+          className="md:hidden text-primary"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={menuOpen}
@@ -193,7 +193,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-[#1F2937] hover:text-[#23354F]"
+                  className="text-sm text-black hover:text-primary"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
@@ -204,7 +204,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href={panelUrl}
-                  className="text-sm font-medium text-[#23354F] hover:text-[#EEC073]"
+                  className="text-sm font-medium text-primary hover:text-gold"
                   onClick={() => setMenuOpen(false)}
                 >
                   Panel
@@ -215,7 +215,7 @@ export default function Navbar() {
           <div className="flex flex-col gap-3 mt-4">
             <Link
               href="/contacto"
-              className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-5 py-2 rounded text-center"
+              className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-5 py-2 rounded text-center"
               onClick={() => setMenuOpen(false)}
             >
               Agendar Consulta
@@ -224,7 +224,7 @@ export default function Navbar() {
               <>
                 <Link
                   href="/perfil"
-                  className="text-sm font-semibold text-[#23354F] border border-[#23354F] px-5 py-2 rounded text-center"
+                  className="text-sm font-semibold text-primary border border-primary px-5 py-2 rounded text-center"
                   onClick={() => setMenuOpen(false)}
                 >
                   Mi perfil
@@ -239,7 +239,7 @@ export default function Navbar() {
             ) : hasAccount ? (
               <Link
                 href="/login"
-                className="text-sm font-semibold text-[#23354F] border border-[#23354F] px-5 py-2 rounded text-center"
+                className="text-sm font-semibold text-primary border border-primary px-5 py-2 rounded text-center"
                 onClick={() => setMenuOpen(false)}
               >
                 Iniciar sesión
@@ -247,7 +247,7 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/registro"
-                className="text-sm font-semibold text-[#23354F] border border-[#23354F] px-5 py-2 rounded text-center"
+                className="text-sm font-semibold text-primary border border-primary px-5 py-2 rounded text-center"
                 onClick={() => setMenuOpen(false)}
               >
                 Registrarme

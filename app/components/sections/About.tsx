@@ -11,7 +11,7 @@ export default function About() {
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
         {/* Photo */}
-        <div className="flex-shrink-0 w-64 h-80 md:w-72 md:h-96 relative rounded-lg overflow-hidden shadow-md">
+        <div className="shrink-0 w-64 h-80 md:w-72 md:h-96 relative rounded-lg overflow-hidden shadow-md">
           <Image
             src="/images/gabriela-about.jpg"
             alt="Gabriela García Cortés"
@@ -22,10 +22,10 @@ export default function About() {
 
         {/* Content */}
         <div className="flex-1">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-1">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-1">
             Gabriela García Cortés
           </h2>
-          <p className="text-[#EEC073] font-semibold text-sm mb-4">
+          <p className="text-gold font-semibold text-sm mb-4">
             Experta Global en Recursos Humanos
           </p>
           <p className="text-sm text-gray-600 leading-relaxed mb-8 max-w-lg">
@@ -36,7 +36,7 @@ export default function About() {
           <div className="flex gap-12 mb-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-3xl font-bold text-[#23354F]">{stat.value}</p>
+                <p className="text-3xl font-bold text-primary">{stat.value}</p>
                 <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
@@ -44,7 +44,7 @@ export default function About() {
 
           <Link
             href="/sobre-mi"
-            className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-3 rounded transition-colors"
+            className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-3 rounded transition-colors"
           >
             Conoce Mi Historia
           </Link>

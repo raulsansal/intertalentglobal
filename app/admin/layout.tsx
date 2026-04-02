@@ -30,14 +30,14 @@ export default async function AdminLayout({
   if (!session || !session.admin) redirect("/login");
 
   return (
-    <div className="min-h-screen bg-[#F3F4F6]">
+    <div className="min-h-screen bg-white-soft">
       {/* Barra de navegación del panel */}
-      <header className="bg-[#23354F] shadow-sm">
+      <header className="bg-primary shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           {/* Logo — mismo texto que el Navbar público, adaptado al fondo navy */}
           <Link
             href="/"
-            className="text-xl font-bold text-white hover:text-[#EEC073] transition-colors"
+            className="text-xl font-bold text-white hover:text-gold transition-colors"
             aria-label="Ir al sitio principal — Intertalent Global"
           >
             Logo
@@ -49,7 +49,7 @@ export default async function AdminLayout({
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-300 hover:text-[#EEC073] transition-colors"
+                className="text-sm font-medium text-gray-300 hover:text-gold transition-colors"
               >
                 {link.label}
               </Link>
@@ -68,7 +68,7 @@ export default async function AdminLayout({
             <form action="/api/auth/logout" method="POST">
               <button
                 type="submit"
-                className="text-sm font-medium text-gray-300 hover:text-[#EEC073] transition-colors"
+                className="text-sm font-medium text-gray-300 hover:text-gold transition-colors"
               >
                 Cerrar sesión
               </button>

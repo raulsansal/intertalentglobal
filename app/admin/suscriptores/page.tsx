@@ -58,7 +58,7 @@ export default async function SuscriptoresPage({
   return (
     <>
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6">
-        <h1 className="text-2xl font-bold text-[#23354F]">Suscriptores</h1>
+        <h1 className="text-2xl font-bold text-primary">Suscriptores</h1>
         <p className="text-sm text-gray-500">
           {total} {total === 1 ? "suscriptor" : "suscriptores"} en total
         </p>
@@ -75,7 +75,7 @@ export default async function SuscriptoresPage({
               <caption className="sr-only">
                 Lista de suscriptores — página {page} de {totalPages}
               </caption>
-              <thead className="bg-[#F3F4F6] border-b border-gray-200">
+              <thead className="bg-white-soft border-b border-gray-200">
                 <tr>
                   <th
                     scope="col"
@@ -117,7 +117,7 @@ export default async function SuscriptoresPage({
                 className={`px-4 py-2 text-sm font-medium rounded border transition-colors ${
                   isFirstPage
                     ? "border-gray-100 text-gray-300 pointer-events-none"
-                    : "border-gray-200 text-[#23354F] hover:border-[#23354F]"
+                    : "border-gray-200 text-primary hover:border-primary"
                 }`}
               >
                 ← Anterior
@@ -134,7 +134,7 @@ export default async function SuscriptoresPage({
                 className={`px-4 py-2 text-sm font-medium rounded border transition-colors ${
                   isLastPage
                     ? "border-gray-100 text-gray-300 pointer-events-none"
-                    : "border-gray-200 text-[#23354F] hover:border-[#23354F]"
+                    : "border-gray-200 text-primary hover:border-primary"
                 }`}
               >
                 Siguiente →

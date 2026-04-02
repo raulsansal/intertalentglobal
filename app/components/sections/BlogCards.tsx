@@ -30,7 +30,7 @@ const articles = [
 
 export default function BlogCards() {
   return (
-    <section className="bg-[#F3F4F6] py-16">
+    <section className="bg-white-soft py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {articles.map((article) => (
@@ -50,16 +50,16 @@ export default function BlogCards() {
 
               {/* Content */}
               <div className="p-5 flex flex-col flex-1">
-                <span className="text-xs font-semibold text-[#EEC073] uppercase tracking-wide mb-2">
+                <span className="text-xs font-semibold text-gold uppercase tracking-wide mb-2">
                   {article.category}
                 </span>
-                <h3 className="text-base font-bold text-[#23354F] mb-2 leading-snug">
+                <h3 className="text-base font-bold text-primary mb-2 leading-snug">
                   {article.title}
                 </h3>
                 <p className="text-sm text-gray-500 mb-4 flex-1">{article.excerpt}</p>
                 <Link
                   href={`/blog/${article.slug}`}
-                  className="text-sm font-medium text-[#23354F] hover:text-[#EEC073] transition-colors"
+                  className="text-sm font-medium text-primary hover:text-gold transition-colors"
                 >
                   Leer más →
                 </Link>

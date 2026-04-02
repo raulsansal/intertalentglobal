@@ -29,7 +29,7 @@ export default function Newsletter() {
   return (
     <section className="bg-white py-16">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
           Mantente al día con las Tendencias de RH Global
         </h2>
         <p className="text-sm text-gray-500 mb-8">
@@ -37,7 +37,7 @@ export default function Newsletter() {
         </p>
 
         {state.status === "success" ? (
-          <p className="text-[#23354F] font-medium">{state.message}</p>
+          <p className="text-primary font-medium">{state.message}</p>
         ) : (
           <form action={action} className="flex flex-col sm:flex-row gap-3 justify-center">
             <input
@@ -46,12 +46,12 @@ export default function Newsletter() {
               placeholder="Tu correo electrónico"
               required
               disabled={isPending}
-              className="flex-1 border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+              className="flex-1 border border-gray-300 rounded px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
             />
             <button
               type="submit"
               disabled={isPending}
-              className="bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-2 rounded transition-colors disabled:opacity-60"
+              className="bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-2 rounded transition-colors disabled:opacity-60"
             >
               {isPending ? "Enviando..." : "Suscribirme"}
             </button>

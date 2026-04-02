@@ -92,7 +92,7 @@ export default async function PreguntasPage({
   return (
     <>
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-        <h1 className="text-2xl font-bold text-[#23354F]">Preguntas</h1>
+        <h1 className="text-2xl font-bold text-primary">Preguntas</h1>
 
         {/* Botones de filtro */}
         <nav aria-label="Filtrar preguntas" className="flex flex-wrap gap-2">
@@ -103,12 +103,11 @@ export default async function PreguntasPage({
             return (
               <a
                 key={f.value}
-                href={href}
-                aria-pressed={isActive}
+                href={href}                
                 className={`text-xs font-semibold px-4 py-2 rounded transition-colors ${
                   isActive
-                    ? "bg-[#23354F] text-white"
-                    : "bg-white text-[#23354F] border border-gray-200 hover:border-[#23354F]"
+                    ? "bg-primary text-white"
+                    : "bg-white text-primary border border-gray-200 hover:border-primary"
                 }`}
               >
                 {f.label}
@@ -130,7 +129,7 @@ export default async function PreguntasPage({
             <caption className="sr-only">
               Listado de preguntas{activeFilter ? ` — filtro: ${STATUS_LABELS[activeFilter as QuestionStatus]}` : ""}
             </caption>
-            <thead className="bg-[#F3F4F6] border-b border-gray-200">
+            <thead className="bg-white-soft border-b border-gray-200">
               <tr>
                 <th scope="col" className="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">
                   Pregunta

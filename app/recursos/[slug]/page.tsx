@@ -61,7 +61,7 @@ export default async function RecursoDetailPage({ params }: PageProps) {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative bg-[#23354F] text-white overflow-hidden">
+      <section className="relative bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 opacity-15">
           <Image
             src={recurso.image}
@@ -83,13 +83,13 @@ export default async function RecursoDetailPage({ params }: PageProps) {
           <p className="text-base text-gray-300 max-w-2xl mb-6 leading-relaxed">{recurso.description}</p>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300">
             <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[#EEC073]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
               {recurso.downloadCount} descargas
             </span>
             <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[#EEC073]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               Actualizado: {recurso.updatedDate}
@@ -101,7 +101,7 @@ export default async function RecursoDetailPage({ params }: PageProps) {
       {/* Preview */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="relative w-full h-64 md:h-96 bg-[#F3F4F6] rounded-lg overflow-hidden shadow-md mb-6">
+          <div className="relative w-full h-64 md:h-96 bg-white-soft rounded-lg overflow-hidden shadow-md mb-6">
             <Image
               src={recurso.previewImage}
               alt={`Vista previa del contenido: ${recurso.title} — ${typeLabel} descargable`}
@@ -116,9 +116,9 @@ export default async function RecursoDetailPage({ params }: PageProps) {
       </section>
 
       {/* Highlights */}
-      <section className="bg-[#F3F4F6] py-16">
+      <section className="bg-white-soft py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-[#23354F] mb-10 text-center">
+          <h2 className="text-2xl font-bold text-primary mb-10 text-center">
             No es solo otra herramienta — es un sistema de acción
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -130,7 +130,7 @@ export default async function RecursoDetailPage({ params }: PageProps) {
                   <span className="text-3xl mb-4 block" aria-hidden="true">
                     {HIGHLIGHT_ICONS[index] ?? '✅'}
                   </span>
-                  <h3 className="text-sm font-bold text-[#23354F] mb-2">{label}</h3>
+                  <h3 className="text-sm font-bold text-primary mb-2">{label}</h3>
                   {body && <p className="text-xs text-gray-500 leading-relaxed">{body}</p>}
                 </div>
               );
@@ -142,21 +142,21 @@ export default async function RecursoDetailPage({ params }: PageProps) {
       {/* Testimonial */}
       <section className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-6">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-[#F3F4F6] rounded-lg p-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white-soft rounded-lg p-6">
             <Image
               src={getAvatarUrl(recurso.testimonial.author, 56)}
               alt={`Foto de perfil de ${recurso.testimonial.author}`}
               width={56}
               height={56}
-              className="rounded-full flex-shrink-0"
+              className="rounded-full shrink-0"
             />
             <div>
               <blockquote>
-                <p className="text-base md:text-lg font-light text-[#23354F] italic leading-relaxed mb-4">
-                  "{recurso.testimonial.quote}"
+                <p className="text-base md:text-lg font-light text-primary italic leading-relaxed mb-4">
+                  &quot;{recurso.testimonial.quote}&quot;
                 </p>
                 <footer className="text-sm text-gray-500">
-                  <strong className="text-[#23354F]">{recurso.testimonial.author}</strong>
+                  <strong className="text-primary">{recurso.testimonial.author}</strong>
                   {' '}· {recurso.testimonial.role}, {recurso.testimonial.company}
                 </footer>
               </blockquote>
@@ -171,11 +171,11 @@ export default async function RecursoDetailPage({ params }: PageProps) {
       {/* FAQ */}
       <section className="bg-white py-16">
         <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-[#23354F] mb-8 text-center">Preguntas comunes</h2>
+          <h2 className="text-2xl font-bold text-primary mb-8 text-center">Preguntas comunes</h2>
           <dl className="space-y-6">
             {recurso.faq.map((item) => (
               <div key={item.question} className="border-b border-gray-100 pb-6">
-                <dt className="text-sm font-bold text-[#23354F] mb-2">{item.question}</dt>
+                <dt className="text-sm font-bold text-primary mb-2">{item.question}</dt>
                 <dd className="text-sm text-gray-600 leading-relaxed">{item.answer}</dd>
               </div>
             ))}
@@ -184,7 +184,7 @@ export default async function RecursoDetailPage({ params }: PageProps) {
       </section>
 
       {/* Demo CTA */}
-      <section className="bg-[#23354F] py-16">
+      <section className="bg-primary py-16">
         <div className="max-w-xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             ¿Prefieres una demo personalizada?
@@ -194,7 +194,7 @@ export default async function RecursoDetailPage({ params }: PageProps) {
           </p>
           <Link
             href="/contacto"
-            className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-8 py-3 rounded transition-colors"
+            className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-8 py-3 rounded transition-colors"
           >
             Agendar una sesión de 15 minutos
           </Link>

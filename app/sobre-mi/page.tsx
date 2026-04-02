@@ -77,9 +77,9 @@ export default function SobreMiPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#23354F] text-white">
+      <section className="bg-primary text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-4">
             Gabriela García Cortés
           </p>
           <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-tight mb-6 leading-tight max-w-3xl mx-auto">
@@ -96,8 +96,8 @@ export default function SobreMiPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-12">
             {/* Profile Image */}
-            <div className="flex-shrink-0">
-              <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden bg-[#F3F4F6] border-4 border-[#EEC073] shadow-lg">
+            <div className="shrink-0">
+              <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden bg-white-soft border-4 border-gold shadow-lg">
                 <Image
                   src="/images/gabriela-about_me.jpg"
                   alt="Foto de Gabriela García Cortés, experta global en recursos humanos"
@@ -110,14 +110,14 @@ export default function SobreMiPage() {
 
             {/* Bio */}
             <div className="flex-1">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">
                 Por qué hago lo que hago
               </h2>
               <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
                 Comencé en una oficina pequeña, con recursos limitados pero una convicción
                 inquebrantable: las personas son el alma de toda organización. Hoy, guío
                 transformaciones en más de 30 países — pero sigo empezando cada proyecto
-                preguntando: <em>"¿Qué necesitan las personas aquí?"</em>
+                preguntando: <em>&quot;¿Qué necesitan las personas aquí?&quot;</em>
               </p>
               <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-8">
                 Mi enfoque combina rigor académico con empatía práctica. No diseño políticas
@@ -127,10 +127,10 @@ export default function SobreMiPage() {
                 {values.map((value) => (
                   <li key={value} className="flex items-center gap-3 text-sm text-gray-700">
                     <span
-                      className="w-5 h-5 rounded-full bg-[#EEC073] flex items-center justify-center flex-shrink-0"
+                      className="w-5 h-5 rounded-full bg-gold flex items-center justify-center shrink-0"
                       aria-hidden="true"
                     >
-                      <svg className="w-3 h-3 text-[#23354F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
@@ -144,9 +144,9 @@ export default function SobreMiPage() {
       </section>
 
       {/* Credentials */}
-      <section className="bg-[#F3F4F6] py-16">
+      <section className="bg-white-soft py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10 text-center">
             Experiencia y Formación
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -156,13 +156,13 @@ export default function SobreMiPage() {
                 className="bg-white rounded-lg p-6 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow"
               >
                 <span
-                  className="text-2xl flex-shrink-0 w-12 h-12 bg-[#F3F4F6] rounded-lg flex items-center justify-center"
+                  className="text-2xl shrink-0 w-12 h-12 bg-white-soft rounded-lg flex items-center justify-center"
                   aria-hidden="true"
                 >
                   {cred.icon}
                 </span>
                 <div>
-                  <h3 className="text-base font-bold text-[#23354F]">{cred.title}</h3>
+                  <h3 className="text-base font-bold text-primary">{cred.title}</h3>
                   <p className="text-sm text-gray-500 mt-1">{cred.subtitle}</p>
                 </div>
               </div>
@@ -174,22 +174,22 @@ export default function SobreMiPage() {
       {/* Testimonials */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10 text-center">
             Lo que dicen mis clientes
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-[#F3F4F6] rounded-lg p-6 flex flex-col gap-4">
+              <div key={t.name} className="bg-white-soft rounded-lg p-6 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                   <Image
                     src={getAvatarUrl(t.name)}
                     alt={`Foto de perfil de ${t.name}`}
                     width={40}
                     height={40}
-                    className="rounded-full flex-shrink-0"
+                    className="rounded-full shrink-0"
                   />
                   <div>
-                    <p className="text-sm font-bold text-[#23354F]">{t.name}</p>
+                    <p className="text-sm font-bold text-primary">{t.name}</p>
                     <p className="text-xs text-gray-500">
                       {t.role} · {t.company}
                     </p>
@@ -198,13 +198,13 @@ export default function SobreMiPage() {
                 {/* Stars */}
                 <div className="flex gap-1" aria-label="Calificación 5 de 5 estrellas">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-[#EEC073]" fill="currentColor" viewBox="0 0 24 24">
+                    <svg key={i} className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
                 </div>
                 <blockquote>
-                  <p className="text-sm text-gray-600 leading-relaxed italic">"{t.quote}"</p>
+                  <p className="text-sm text-gray-600 leading-relaxed italic">&quot;{t.quote}&quot;</p>
                 </blockquote>
               </div>
             ))}
@@ -213,7 +213,7 @@ export default function SobreMiPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#23354F] py-16 md:py-24">
+      <section className="bg-primary py-16 md:py-24">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             ¿Listo para transformar tu organización desde lo humano?
@@ -223,7 +223,7 @@ export default function SobreMiPage() {
           </p>
           <Link
             href="/contacto"
-            className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-8 py-3 rounded transition-colors"
+            className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-8 py-3 rounded transition-colors"
           >
             Agendar mi consulta →
           </Link>

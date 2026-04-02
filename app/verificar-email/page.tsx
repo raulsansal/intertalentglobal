@@ -44,7 +44,7 @@ export default function VerificarEmailPage() {
   return (
     <main
       id="main-content"
-      className="min-h-screen bg-[#F3F4F6] flex items-center justify-center px-6"
+      className="min-h-screen bg-white-soft flex items-center justify-center px-6"
     >
       <div className="bg-white rounded-lg shadow-sm p-10 w-full max-w-sm text-center">
         {status === "loading" && (
@@ -56,10 +56,10 @@ export default function VerificarEmailPage() {
 
         {(status === "success" || status === "no-session") && (
           <>
-            <div className="w-16 h-16 bg-[#EEC073]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg
                 aria-hidden="true"
-                className="w-8 h-8 text-[#EEC073]"
+                className="w-8 h-8 text-gold"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ export default function VerificarEmailPage() {
                 />
               </svg>
             </div>
-            <h1 className="text-xl font-bold text-[#23354F] mb-3">
+            <h1 className="text-xl font-bold text-primary mb-3">
               ¡Correo verificado!
             </h1>
             <p className="text-sm text-gray-500 leading-relaxed mb-8">
@@ -81,7 +81,7 @@ export default function VerificarEmailPage() {
             </p>
             <Link
               href={status === "no-session" ? "/login" : "/"}
-              className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-3 rounded transition-colors"
+              className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-3 rounded transition-colors"
             >
               {status === "no-session" ? "Iniciar sesión" : "Ir al inicio"}
             </Link>
@@ -106,7 +106,7 @@ export default function VerificarEmailPage() {
                 />
               </svg>
             </div>
-            <h1 className="text-xl font-bold text-[#23354F] mb-3">
+            <h1 className="text-xl font-bold text-primary mb-3">
               Enlace no válido
             </h1>
             <p className="text-sm text-gray-500 leading-relaxed mb-8">
@@ -115,7 +115,7 @@ export default function VerificarEmailPage() {
             </p>
             <Link
               href="/login"
-              className="inline-block bg-[#23354F] hover:bg-[#1a2840] text-white font-semibold text-sm px-6 py-3 rounded transition-colors"
+              className="inline-block bg-primary hover:bg-[#1a2840] text-white font-semibold text-sm px-6 py-3 rounded transition-colors"
             >
               Ir al inicio de sesión
             </Link>

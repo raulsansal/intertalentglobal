@@ -175,7 +175,7 @@ export default function RegisterForm() {
         <div>
           <label
             htmlFor="firstName"
-            className="block text-sm font-medium text-[#23354F] mb-1"
+            className="block text-sm font-medium text-primary mb-1"
           >
             Nombre
           </label>
@@ -186,13 +186,13 @@ export default function RegisterForm() {
             autoComplete="given-name"
             required
             disabled={isPending}
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
           />
         </div>
         <div>
           <label
             htmlFor="lastName"
-            className="block text-sm font-medium text-[#23354F] mb-1"
+            className="block text-sm font-medium text-primary mb-1"
           >
             Apellido
           </label>
@@ -203,7 +203,7 @@ export default function RegisterForm() {
             autoComplete="family-name"
             required
             disabled={isPending}
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
           />
         </div>
       </div>
@@ -211,7 +211,7 @@ export default function RegisterForm() {
       <div className="mb-4">
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-[#23354F] mb-1"
+          className="block text-sm font-medium text-primary mb-1"
         >
           Correo electrónico
         </label>
@@ -223,14 +223,14 @@ export default function RegisterForm() {
           required
           disabled={isPending}
           aria-describedby={error ? "register-error" : undefined}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
         />
       </div>
 
       <div className="mb-4">
         <label
           htmlFor="password"
-          className="block text-sm font-medium text-[#23354F] mb-1"
+          className="block text-sm font-medium text-primary mb-1"
         >
           Contraseña
         </label>
@@ -241,7 +241,7 @@ export default function RegisterForm() {
           autoComplete="new-password"
           required
           disabled={isPending}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
         />
         <p className="text-xs text-gray-500 mt-1">Mínimo 8 caracteres</p>
       </div>
@@ -249,7 +249,7 @@ export default function RegisterForm() {
       <div className="mb-6">
         <label
           htmlFor="confirmPassword"
-          className="block text-sm font-medium text-[#23354F] mb-1"
+          className="block text-sm font-medium text-primary mb-1"
         >
           Confirmar contraseña
         </label>
@@ -260,7 +260,7 @@ export default function RegisterForm() {
           autoComplete="new-password"
           required
           disabled={isPending}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
         />
       </div>
 
@@ -273,7 +273,7 @@ export default function RegisterForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-3 rounded transition-colors disabled:opacity-60"
+        className="w-full bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-3 rounded transition-colors disabled:opacity-60"
       >
         {isPending ? "Creando cuenta..." : "Crear cuenta"}
       </button>
@@ -291,7 +291,7 @@ export default function RegisterForm() {
         onClick={handleGoogleRegister}
         disabled={isPending}
         aria-label="Registrarse con Google"
-        className="w-full flex items-center justify-center gap-3 border border-gray-300 text-[#23354F] font-medium text-sm px-6 py-3 rounded hover:bg-gray-50 transition-colors disabled:opacity-60 mb-4"
+        className="w-full flex items-center justify-center gap-3 border border-gray-300 text-primary font-medium text-sm px-6 py-3 rounded hover:bg-gray-50 transition-colors disabled:opacity-60 mb-4"
       >
         <GoogleIcon />
         Continuar con Google
@@ -301,7 +301,7 @@ export default function RegisterForm() {
         ¿Ya tienes cuenta?{" "}
         <Link
           href="/login"
-          className="text-[#23354F] underline hover:text-[#EEC073] transition-colors"
+          className="text-primary underline hover:text-gold transition-colors"
         >
           Inicia sesión
         </Link>

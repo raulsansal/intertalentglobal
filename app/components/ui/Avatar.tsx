@@ -42,7 +42,7 @@ export default function Avatar({
       <img
         src={avatarUrl}
         alt={`Foto de perfil de ${displayName ?? email}`}
-        className={`${sizeClass} rounded-full object-cover ring-2 ring-[#EEC073]`}
+        className={`${sizeClass} rounded-full object-cover ring-2 ring-gold`}
       />
     );
   }
@@ -50,7 +50,7 @@ export default function Avatar({
   return (
     <span
       aria-label={`Perfil de ${displayName ?? email}`}
-      className={`${sizeClass} rounded-full bg-[#23354F] text-[#EEC073] font-semibold flex items-center justify-center ring-2 ring-[#EEC073] select-none`}
+      className={`${sizeClass} rounded-full bg-primary text-gold font-semibold flex items-center justify-center ring-2 ring-gold select-none`}
     >
       {initials}
     </span>

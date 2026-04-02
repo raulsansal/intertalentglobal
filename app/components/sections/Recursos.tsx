@@ -30,7 +30,7 @@ const resources = [
 
 export default function Recursos() {
   return (
-    <section className="bg-[#23354F] py-16">
+    <section className="bg-primary py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
@@ -45,12 +45,12 @@ export default function Recursos() {
           {resources.map((resource) => (
             <div
               key={resource.title}
-              className="bg-[#1F2937] rounded-lg p-6 flex flex-col gap-4"
+              className="bg-black rounded-lg p-6 flex flex-col gap-4"
             >
-              <div className="text-[#EEC073]">{resource.icon}</div>
+              <div className="text-gold">{resource.icon}</div>
               <h3 className="font-bold text-white text-base">{resource.title}</h3>
               <p className="text-sm text-gray-400 flex-1">{resource.description}</p>
-              <button className="bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-5 py-2 rounded transition-colors w-fit">
+              <button className="bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-5 py-2 rounded transition-colors w-fit">
                 Descargar Gratis
               </button>
             </div>

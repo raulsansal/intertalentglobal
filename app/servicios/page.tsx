@@ -48,9 +48,9 @@ export default function ServiciosPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#23354F] text-white">
+      <section className="bg-primary text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-4">
             Nuestros Servicios
           </p>
           <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
@@ -74,24 +74,24 @@ export default function ServiciosPage() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <span
-                    className={`text-2xl w-12 h-12 rounded-lg ${servicio.color} flex items-center justify-center flex-shrink-0`}
+                    className={`text-2xl w-12 h-12 rounded-lg ${servicio.color} flex items-center justify-center shrink-0`}
                     aria-hidden="true"
                   >
                     {servicio.icon}
                   </span>
-                  <h2 className="text-xl font-bold text-[#23354F] leading-snug">{servicio.title}</h2>
+                  <h2 className="text-xl font-bold text-primary leading-snug">{servicio.title}</h2>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">{servicio.shortDescription}</p>
 
                 <div className="mb-6">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-[#23354F] mb-3">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-3">
                     Resultados que lograrás:
                   </p>
                   <ul className="space-y-2" aria-label={`Resultados del servicio ${servicio.title}`}>
                     {servicio.results.map((result) => (
                       <li key={result} className="flex items-start gap-2 text-sm text-gray-700">
                         <svg
-                          className="w-4 h-4 text-[#EEC073] flex-shrink-0 mt-0.5"
+                          className="w-4 h-4 text-gold shrink-0 mt-0.5"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                           aria-hidden="true"
@@ -107,7 +107,7 @@ export default function ServiciosPage() {
                 <div className="mt-auto">
                   <Link
                     href={`/servicios/${servicio.slug}`}
-                    className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-2 rounded transition-colors"
+                    className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-2 rounded transition-colors"
                   >
                     Solicitar propuesta →
                   </Link>
@@ -119,9 +119,9 @@ export default function ServiciosPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="bg-[#F3F4F6] py-16">
+      <section className="bg-white-soft py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10 text-center">
             Casos de Éxito
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -131,16 +131,16 @@ export default function ServiciosPage() {
                 className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-[#EEC073]">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-gold">
                     {c.serviceTitle}
                   </span>
                 </div>
                 <div className="flex gap-6 mb-3">
                   <div className="text-center">
-                    <p className="text-lg font-bold text-[#23354F]">{c.metric1}</p>
+                    <p className="text-lg font-bold text-primary">{c.metric1}</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-lg font-bold text-[#23354F]">{c.metric2}</p>
+                    <p className="text-lg font-bold text-primary">{c.metric2}</p>
                   </div>
                 </div>
                 <p className="text-xs text-gray-500 mb-3">
@@ -149,7 +149,7 @@ export default function ServiciosPage() {
                 <p className="text-sm text-gray-600 leading-relaxed">{c.description}</p>
                 <Link
                   href={`/servicios/${c.serviceSlug}`}
-                  className="inline-block mt-4 text-xs font-semibold text-[#23354F] border border-[#23354F] hover:bg-[#23354F] hover:text-white px-4 py-2 rounded transition-colors"
+                  className="inline-block mt-4 text-xs font-semibold text-primary border border-primary hover:bg-primary hover:text-white px-4 py-2 rounded transition-colors"
                 >
                   Ver caso completo
                 </Link>
@@ -162,22 +162,22 @@ export default function ServiciosPage() {
       {/* Testimonials */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#23354F] mb-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10 text-center">
             Lo que dicen nuestros clientes
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-[#F3F4F6] rounded-lg p-6 flex flex-col gap-4">
+              <div key={t.name} className="bg-white-soft rounded-lg p-6 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                   <Image
                     src={getAvatarUrl(t.name)}
                     alt={`Foto de perfil de ${t.name}`}
                     width={40}
                     height={40}
-                    className="rounded-full flex-shrink-0"
+                    className="rounded-full shrink-0"
                   />
                   <div>
-                    <p className="text-sm font-bold text-[#23354F]">{t.name}</p>
+                    <p className="text-sm font-bold text-primary">{t.name}</p>
                     <p className="text-xs text-gray-500">
                       {t.role} · {t.company}
                     </p>
@@ -185,13 +185,13 @@ export default function ServiciosPage() {
                 </div>
                 <div className="flex gap-1" aria-label="Calificación 5 de 5 estrellas">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-[#EEC073]" fill="currentColor" viewBox="0 0 24 24">
+                    <svg key={i} className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
                 </div>
                 <blockquote>
-                  <p className="text-sm text-gray-600 leading-relaxed italic">"{t.quote}"</p>
+                  <p className="text-sm text-gray-600 leading-relaxed italic">&quot;{t.quote}&quot;</p>
                 </blockquote>
               </div>
             ))}
@@ -200,7 +200,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#23354F] py-16 md:py-24">
+      <section className="bg-primary py-16 md:py-24">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             ¿Cuál es tu mayor desafío en RH global hoy?
@@ -211,13 +211,13 @@ export default function ServiciosPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contacto"
-              className="inline-block bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-8 py-3 rounded transition-colors"
+              className="inline-block bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-8 py-3 rounded transition-colors"
             >
               Agendar mi consulta →
             </Link>
             <Link
               href="/servicios"
-              className="inline-block border border-white text-white hover:bg-white hover:text-[#23354F] font-medium text-sm px-8 py-3 rounded transition-colors"
+              className="inline-block border border-white text-white hover:bg-white hover:text-primary font-medium text-sm px-8 py-3 rounded transition-colors"
             >
               Ver todos los servicios
             </Link>

@@ -47,7 +47,7 @@ export default async function PerfilPage() {
   return (
     <main
       id="main-content"
-      className="min-h-screen bg-[#F3F4F6] py-12 px-6"
+      className="min-h-screen bg-white-soft py-12 px-6"
     >
       <div className="bg-white rounded-lg shadow-sm p-8 w-full max-w-2xl mx-auto">
         {!isEmailVerified && (
@@ -56,7 +56,7 @@ export default async function PerfilPage() {
           </div>
         )}
 
-        <h1 className="text-xl font-bold text-[#23354F] mb-6">Mi perfil</h1>
+        <h1 className="text-xl font-bold text-primary mb-6">Mi perfil</h1>
 
         <ProfileForm initialData={profileData} />
       </div>

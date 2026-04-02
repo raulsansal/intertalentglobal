@@ -126,7 +126,7 @@ export default async function UsuariosPage() {
   return (
     <>
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6">
-        <h1 className="text-2xl font-bold text-[#23354F]">Usuarios</h1>
+        <h1 className="text-2xl font-bold text-primary">Usuarios</h1>
         <p className="text-sm text-gray-500">
           {users.length} {users.length === 1 ? "usuario registrado" : "usuarios registrados"}
         </p>
@@ -143,7 +143,7 @@ export default async function UsuariosPage() {
               <caption className="sr-only">
                 Lista de usuarios y sus roles asignados
               </caption>
-              <thead className="bg-[#F3F4F6] border-b border-gray-200">
+              <thead className="bg-white-soft border-b border-gray-200">
                 <tr>
                   <th
                     scope="col"
@@ -211,7 +211,7 @@ export default async function UsuariosPage() {
                           id={`role-${user.uid}`}
                           name="role"
                           defaultValue={user.role}
-                          className="text-xs border border-gray-200 rounded px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-[#EEC073] bg-white text-gray-700"
+                          className="text-xs border border-gray-200 rounded px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-gold bg-white text-gray-700"
                         >
                           {ALL_ROLES.map((r) => (
                             <option key={r} value={r}>
@@ -221,7 +221,7 @@ export default async function UsuariosPage() {
                         </select>
                         <button
                           type="submit"
-                          className="text-xs font-semibold px-3 py-1.5 rounded bg-[#23354F] text-white hover:bg-[#1a2840] transition-colors"
+                          className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white hover:bg-[#1a2840] transition-colors"
                         >
                           Guardar
                         </button>
@@ -246,7 +246,7 @@ export default async function UsuariosPage() {
 // ─── Badge de rol ─────────────────────────────────────────────────────────────
 
 const ROLE_BADGE_CLASSES: Record<Role, string> = {
-  admin: "bg-[#23354F] text-white",
+  admin: "bg-primary text-white",
   moderador: "bg-blue-100 text-blue-800",
   editor_blog: "bg-purple-100 text-purple-800",
   editor_podcast: "bg-orange-100 text-orange-800",

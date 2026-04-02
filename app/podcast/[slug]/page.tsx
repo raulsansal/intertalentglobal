@@ -40,10 +40,10 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#23354F] text-white">
+      <section className="bg-primary text-white">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="mb-4">
-            <span className="text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest bg-[#EEC073] text-[#23354F]">
+            <span className="text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest bg-gold text-primary">
               Podcast
             </span>
           </div>
@@ -76,8 +76,8 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-10 items-start">
             {/* Cover Image */}
-            <div className="flex-shrink-0 w-full md:w-64">
-              <div className="relative w-full md:w-64 h-64 bg-[#F3F4F6] rounded-lg overflow-hidden shadow-md">
+            <div className="shrink-0 w-full md:w-64">
+              <div className="relative w-full md:w-64 h-64 bg-white-soft rounded-lg overflow-hidden shadow-md">
                 <Image
                   src={episode.image}
                   alt={`Portada del episodio ${episode.episodeNumber}: ${episode.title}`}
@@ -89,16 +89,16 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
 
             {/* Player Info */}
             <div className="flex-1">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-2">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-2">
                 Episodio {episode.episodeNumber}
               </p>
-              <h2 className="text-xl md:text-2xl font-bold text-[#23354F] mb-4">{episode.title}</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">{episode.title}</h2>
 
               {/* Embedded Player Placeholder */}
-              <div className="w-full h-20 bg-[#F3F4F6] rounded-lg flex items-center justify-center border border-gray-200 mb-6">
+              <div className="w-full h-20 bg-white-soft rounded-lg flex items-center justify-center border border-gray-200 mb-6">
                 <div className="flex items-center gap-3 text-gray-400">
-                  <div className="w-10 h-10 rounded-full bg-[#EEC073] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#23354F]" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
+                    <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
@@ -122,7 +122,7 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
                       href={platform.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-gray-300 text-[#23354F] hover:border-[#23354F] hover:bg-[#23354F] hover:text-white font-medium text-sm px-4 py-2 rounded transition-colors"
+                      className="border border-gray-300 text-primary hover:border-primary hover:bg-primary hover:text-white font-medium text-sm px-4 py-2 rounded transition-colors"
                     >
                       {platform.name}
                     </a>
@@ -135,17 +135,17 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
       </section>
 
       {/* Key Quote */}
-      <section className="bg-[#F3F4F6] py-16">
+      <section className="bg-white-soft py-16">
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-6 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-6 text-center">
             Momento clave del episodio
           </p>
-          <blockquote className="border-l-4 border-[#EEC073] pl-6 py-2">
-            <p className="text-lg md:text-xl font-light text-[#23354F] italic leading-relaxed mb-4">
+          <blockquote className="border-l-4 border-gold pl-6 py-2">
+            <p className="text-lg md:text-xl font-light text-primary italic leading-relaxed mb-4">
               {episode.keyQuote}
             </p>
             <footer className="text-sm text-gray-500">
-              <strong className="text-[#23354F]">{episode.keyQuoteAuthor}</strong>
+              <strong className="text-primary">{episode.keyQuoteAuthor}</strong>
               {episode.keyQuoteRole && <span> · {episode.keyQuoteRole}</span>}
             </footer>
           </blockquote>
@@ -156,7 +156,7 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
       {episode.relatedResources.length > 0 && (
         <section className="bg-white py-16">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-2xl font-bold text-[#23354F] mb-8">
+            <h2 className="text-2xl font-bold text-primary mb-8">
               Profundiza con herramientas prácticas
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -165,7 +165,7 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
                   key={resource.slug}
                   className="border border-gray-100 rounded-lg p-5 hover:shadow-md transition-shadow flex gap-4 items-start"
                 >
-                  <div className="relative w-16 h-16 flex-shrink-0 bg-[#F3F4F6] rounded overflow-hidden">
+                  <div className="relative w-16 h-16 shrink-0 bg-white-soft rounded overflow-hidden">
                     <Image
                       src={resource.image}
                       alt={`Recurso: ${resource.title}`}
@@ -174,13 +174,13 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
                     />
                   </div>
                   <div className="flex-1">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-[#EEC073]">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-gold">
                       {resource.type}
                     </span>
-                    <h3 className="text-sm font-bold text-[#23354F] mt-1 mb-2">{resource.title}</h3>
+                    <h3 className="text-sm font-bold text-primary mt-1 mb-2">{resource.title}</h3>
                     <Link
                       href={`/recursos/${resource.slug}`}
-                      className="text-xs font-semibold text-[#23354F] hover:text-[#EEC073] transition-colors"
+                      className="text-xs font-semibold text-primary hover:text-gold transition-colors"
                     >
                       Obtener recurso →
                     </Link>
@@ -193,12 +193,12 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
       )}
 
       {/* About the Podcast */}
-      <section className="bg-[#F3F4F6] py-16">
+      <section className="bg-white-soft py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#EEC073] mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-4">
             Sobre el podcast
           </p>
-          <h2 className="text-2xl font-bold text-[#23354F] mb-4">El Pulso Global</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">El Pulso Global</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
             Conversaciones profundas sobre el futuro del trabajo, el talento global y el liderazgo humano.
             Cada episodio reúne a expertos, líderes y pensadores que están redefiniendo cómo las
@@ -209,7 +209,7 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
       </section>
 
       {/* Subscribe CTA */}
-      <section className="bg-[#23354F] py-16">
+      <section className="bg-primary py-16">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
             ¿Quieres recibir nuevos episodios?
@@ -225,11 +225,11 @@ export default async function PodcastEpisodePage({ params }: PageProps) {
               id="podcast-email"
               type="email"
               placeholder="Tu correo electrónico"
-              className="flex-1 border border-gray-500 bg-white/10 text-white placeholder-gray-400 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#EEC073]"
+              className="flex-1 border border-gray-500 bg-white/10 text-white placeholder-gray-400 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
             />
             <button
               type="submit"
-              className="bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-2 rounded transition-colors"
+              className="bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-2 rounded transition-colors"
             >
               Suscribirme
             </button>

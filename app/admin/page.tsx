@@ -40,7 +40,7 @@ export default async function AdminPage() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold text-[#23354F] mb-8">Dashboard</h1>
+      <h1 className="text-2xl font-bold text-primary mb-8">Dashboard</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {metrics.map((metric) => (
@@ -49,7 +49,7 @@ export default async function AdminPage() {
             className="bg-white rounded-lg shadow-sm p-8 flex flex-col items-center text-center"
           >
             <span
-              className="text-5xl font-bold text-[#EEC073] mb-2"
+              className="text-5xl font-bold text-gold mb-2"
               aria-label={`${metric.value} ${metric.label.toLowerCase()}`}
             >
               {metric.value}
@@ -57,7 +57,7 @@ export default async function AdminPage() {
             <p className="text-sm text-gray-500 mb-6">{metric.label}</p>
             <Link
               href={metric.href}
-              className="text-sm font-semibold text-[#23354F] underline hover:text-[#EEC073] transition-colors"
+              className="text-sm font-semibold text-primary underline hover:text-gold transition-colors"
             >
               {metric.cta}
             </Link>

@@ -168,12 +168,12 @@ export default function LoginForm() {
             setError(null);
             setRecoverySuccess(false);
           }}
-          className="text-sm text-[#23354F] underline hover:text-[#EEC073] transition-colors mb-4 block"
+          className="text-sm text-primary underline hover:text-gold transition-colors mb-4 block"
         >
           ← Volver al inicio de sesión
         </button>
 
-        <h2 className="text-lg font-semibold text-[#23354F] mb-4">
+        <h2 className="text-lg font-semibold text-primary mb-4">
           Recuperar contraseña
         </h2>
 
@@ -191,7 +191,7 @@ export default function LoginForm() {
             <div className="mb-4">
               <label
                 htmlFor="recovery-email"
-                className="block text-sm font-medium text-[#23354F] mb-1"
+                className="block text-sm font-medium text-primary mb-1"
               >
                 Correo electrónico
               </label>
@@ -202,7 +202,7 @@ export default function LoginForm() {
                 autoComplete="email"
                 required
                 disabled={isPending}
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
               />
             </div>
 
@@ -215,7 +215,7 @@ export default function LoginForm() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-3 rounded transition-colors disabled:opacity-60"
+              className="w-full bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-3 rounded transition-colors disabled:opacity-60"
             >
               {isPending ? "Enviando..." : "Enviar enlace"}
             </button>
@@ -242,7 +242,7 @@ export default function LoginForm() {
       <div className="mb-4">
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-[#23354F] mb-1"
+          className="block text-sm font-medium text-primary mb-1"
         >
           Correo electrónico
         </label>
@@ -254,14 +254,14 @@ export default function LoginForm() {
           required
           disabled={isPending}
           aria-describedby={error ? "login-error" : undefined}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
         />
       </div>
 
       <div className="mb-2">
         <label
           htmlFor="password"
-          className="block text-sm font-medium text-[#23354F] mb-1"
+          className="block text-sm font-medium text-primary mb-1"
         >
           Contraseña
         </label>
@@ -272,7 +272,7 @@ export default function LoginForm() {
           autoComplete="current-password"
           required
           disabled={isPending}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#EEC073] disabled:opacity-60"
+          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold disabled:opacity-60"
         />
       </div>
 
@@ -283,7 +283,7 @@ export default function LoginForm() {
             setView("recovery");
             setError(null);
           }}
-          className="text-xs text-gray-500 hover:text-[#23354F] underline transition-colors"
+          className="text-xs text-gray-500 hover:text-primary underline transition-colors"
         >
           ¿Olvidaste tu contraseña?
         </button>
@@ -298,7 +298,7 @@ export default function LoginForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full bg-[#EEC073] hover:bg-[#d4a455] text-[#23354F] font-semibold text-sm px-6 py-3 rounded transition-colors disabled:opacity-60"
+        className="w-full bg-gold hover:bg-gold-hover text-primary font-semibold text-sm px-6 py-3 rounded transition-colors disabled:opacity-60"
       >
         {isPending ? "Verificando..." : "Ingresar"}
       </button>
@@ -316,7 +316,7 @@ export default function LoginForm() {
         onClick={handleGoogleLogin}
         disabled={isPending}
         aria-label="Iniciar sesión con Google"
-        className="w-full flex items-center justify-center gap-3 border border-gray-300 text-[#23354F] font-medium text-sm px-6 py-3 rounded hover:bg-gray-50 transition-colors disabled:opacity-60 mb-4"
+        className="w-full flex items-center justify-center gap-3 border border-gray-300 text-primary font-medium text-sm px-6 py-3 rounded hover:bg-gray-50 transition-colors disabled:opacity-60 mb-4"
       >
         <GoogleIcon />
         Continuar con Google
@@ -326,7 +326,7 @@ export default function LoginForm() {
         ¿Aún no te has registrado?{" "}
         <Link
           href="/registro"
-          className="text-[#23354F] underline hover:text-[#EEC073] transition-colors"
+          className="text-primary underline hover:text-gold transition-colors"
         >
           Registrarme
         </Link>

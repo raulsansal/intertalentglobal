@@ -22,9 +22,9 @@ export default async function PanelPage() {
   if (role === "usuario") redirect("/");
 
   return (
-    <div className="min-h-screen bg-[#F3F4F6]">
+    <div className="min-h-screen bg-white-soft">
       {/* Barra de navegación del panel */}
-      <nav aria-label="Panel de staff" className="bg-[#23354F] shadow-sm">
+      <nav aria-label="Panel de staff" className="bg-primary shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <span className="text-sm font-medium text-gray-300">
             {ROLE_LABELS[role]}
@@ -43,10 +43,10 @@ export default async function PanelPage() {
         className="flex items-center justify-center px-6 py-16"
       >
       <div className="bg-white rounded-lg shadow-sm p-10 w-full max-w-lg text-center">
-        <div className="w-16 h-16 bg-[#EEC073]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
           <svg
             aria-hidden="true"
-            className="w-8 h-8 text-[#EEC073]"
+            className="w-8 h-8 text-gold"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -60,10 +60,10 @@ export default async function PanelPage() {
           </svg>
         </div>
 
-        <p className="text-xs font-semibold text-[#EEC073] uppercase tracking-widest mb-2">
+        <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-2">
           {ROLE_LABELS[role]}
         </p>
-        <h1 className="text-2xl font-bold text-[#23354F] mb-3">
+        <h1 className="text-2xl font-bold text-primary mb-3">
           Panel de {ROLE_LABELS[role]}
         </h1>
         <p className="text-sm text-gray-500 leading-relaxed mb-8">
@@ -73,7 +73,7 @@ export default async function PanelPage() {
 
         <Link
           href="/"
-          className="inline-block bg-[#23354F] hover:bg-[#1a2840] text-white font-semibold text-sm px-6 py-3 rounded transition-colors"
+          className="inline-block bg-primary hover:bg-[#1a2840] text-white font-semibold text-sm px-6 py-3 rounded transition-colors"
         >
           Volver al sitio
         </Link>
